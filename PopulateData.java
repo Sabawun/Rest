@@ -17,19 +17,15 @@ public class PopulateData {
         }
         for (int i=0;i<3;i++) {
             Customer pop = new Customer();
-            Booking val = new Booking();
-            Order pep = new Order();
-            pep.setDetails("This");
-            pep.setDescription("Work");
             int x = 123;
-            String y = "111";
+            String y = "111";    
             pop.setName("Customer"+i);
             pop.setSsn(1110+i);
             pop.setGender('F');
             pop.setRegistrationDate("2020-11-11");
             pop.setDateOfBirth("1998-01-12");
             pop.makeBooking(x,y);
-            val.orders.add(i,pep);
+            pop.getBooking().get(0).makeOrder("This", "Works");
             PopulateData.customer.add(pop);
         }
 
